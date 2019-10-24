@@ -156,7 +156,10 @@ class BasicCommands extends \Robo\Tasks
             }
 
             if ($result && $result->getExitCode() === 0) {
-                $this->frontendInstall();
+                //$this->frontendInstall();
+                $this->io()->note(
+                    'Successfully downloaded data-catalog-frontend to /src/frontend'
+                );
             }
 
             $this->io()->note(
